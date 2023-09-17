@@ -14,6 +14,9 @@ const Login =()=>{
 			[id]:value
 		})
 	}
+	const onClick =(e)=>{
+		document.location.href="/register";
+	}
 	const {id,passwd} = input;
 	
 	const Axios =()=>{
@@ -37,7 +40,8 @@ const Login =()=>{
 			<input type="text" id="id" value={id} onChange={onChange}/>
 			<label>비밀번호</label>
 			<input type="password" id="passwd" value={passwd} onChange={onChange}/>
-			<button onClick={()=>Axios()}>데이터 보내기</button>
+			<button onClick={()=>Axios()}>로그인</button>
+			<button onClick={onClick}>회원가입</button>
 		</div>
 	)
 }

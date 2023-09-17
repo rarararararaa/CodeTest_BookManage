@@ -1,3 +1,6 @@
+ul{
+	list-style: none;
+}
 .App {
   padding: 20px;
   text-align: center;
@@ -36,4 +39,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*회원가입*/
+.register-input{
+	text-align:left;
+	margin: 0 auto;
+	width: 500px;
+}
+.register-input label{
+	display: inline-block;
+    width: 70px;
+}
+.register-submit{
+	position: relative;
+    left: 130px;	
+}
+form p{
+	margin: 5px 0 5px 70px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #e80e0e;
+}
+.id-check{
+	margin-left: 5px;
 }
