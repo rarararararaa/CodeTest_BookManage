@@ -6,8 +6,8 @@ const Register =()=>{
 	//id 중복 체크
 	
 	//form
-	const {register, watch, handleSubmit, formState: { errors }} = useForm({mode:"onChange"});
-	console.log(watch());
+	const {register, handleSubmit, formState: { errors }} = useForm({mode:"onChange"});
+	//console.log(watch());
 	//회원가입 submit
 	const onSubmit =(data)=>{
 		let {id,passwd,name,cell,email} = data;

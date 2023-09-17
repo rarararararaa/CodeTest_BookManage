@@ -13,8 +13,9 @@ import lombok.Getter;
 public class MemberVO {
 	private String mem_name;
 	private String mem_id;
-	private String passwd;
+	private String mem_passwd;
 	private Date mem_reg_date;
 	private String mem_cell;
 	private String mem_email;
+	private int mem_auth;
 }

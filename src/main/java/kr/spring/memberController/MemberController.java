@@ -3,6 +3,8 @@ package kr.spring.memberController;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,9 +35,17 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/login")
 	//axios Post 통신할 시 requestBody
-	public void login(@RequestBody Map<String, Object> map) {
+	public Map<String, Object> login(@RequestBody Map<String, String> map) {
+		Map<String, Object> result_map = new HashMap<String, Object>();
 		log.debug("id와 passwd = "+map);
 		log.debug("id = "+map.get("id"));
+		MemberVO mem = memberService.chechid(map.get("id"));
+		result_map.put("result", false);
+		if(mem != null && map.get("passwd").equals(mem.getMem_passwd())) {
+			result_map.put("result", true);
+			result_map.put("auth", mem.getMem_auth());
+		}
+		return result_map;
 	}
 	@PostMapping("/register")
 	@ResponseBody

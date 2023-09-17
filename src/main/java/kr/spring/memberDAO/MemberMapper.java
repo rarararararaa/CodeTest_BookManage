@@ -13,7 +13,7 @@ public interface MemberMapper {
 	
 	@Select("SELECT member_seq.nextval FROM dual")
 	public int getMemseq();
-	
+	//id 중복 체크&로그인
 	@Select("SELECT * FROM member WHERE mem_id = #{id}")
 	public MemberVO chechid(String id);
 }
