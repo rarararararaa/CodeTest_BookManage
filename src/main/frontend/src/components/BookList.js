@@ -10,7 +10,7 @@ const BookList =()=>{
 		})
 	},[]);
 	return(
-		<tabel>
+		<tabel className="bookListInfo">
 			<p>책리스트</p>
 			<thead>
 				<tr>
@@ -29,7 +29,7 @@ const BookList =()=>{
 						<tr>
 							<td>{list[i].callNumber}</td>
 							<td>{list[i].isbn}</td>
-							<td>{list[i].book_name}</td>
+							<td><a href="#">{list[i].book_name}</a></td>
 							<td>{list[i].authors}</td>
 							<td>{list[i].publisher}</td>
 							<td>

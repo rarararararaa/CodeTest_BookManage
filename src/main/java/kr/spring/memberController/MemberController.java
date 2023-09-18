@@ -32,7 +32,6 @@ public class MemberController {
 		return new MemberVO();
 	}
 	
-	@ResponseBody
 	@RequestMapping("/login")
 	//axios Post 통신할 시 requestBody
 	public Map<String, Object> login(@RequestBody Map<String, String> map) {
@@ -48,7 +47,6 @@ public class MemberController {
 		return result_map;
 	}
 	@PostMapping("/register")
-	@ResponseBody
 	public String register(@RequestBody Map<String, Object> map) {
 		memberService.insertMember(map);
 		return "회원가입에 성공했습니다.";
@@ -56,7 +54,6 @@ public class MemberController {
 	
 	//id check
 	@RequestMapping("/check")
-	@ResponseBody
 	public Map<String, String> idCheck(@RequestBody Object id) {
 		Map<String, String> map = new HashMap<String, String>();
 		log.debug("<<check확인>>"+id);

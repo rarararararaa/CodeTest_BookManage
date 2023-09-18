@@ -50,6 +50,9 @@ label{
 	display: inline-block;
     width: 70px;
 }
+input{
+	width: 177px;
+}
 .register-submit{
 	position: relative;
     left: 130px;	

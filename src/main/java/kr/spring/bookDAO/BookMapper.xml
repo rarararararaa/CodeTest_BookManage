@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.spring.bookDAO.BookMapper">
 	
-	<insert id="insertBook" parameterType="bookVO">
+	<insert id="insertBook" parameterType="map">
 		INSERT INTO book(
 			callNumber,
 			isbn,
@@ -20,9 +20,21 @@
 			#{book_name},
 			#{authors},
 			#{publisher},
-			#{publication_year},
 			#{bookImageUrl},
+			#{publication_year},
 			#{book_detail}
+		)
+	</insert>
+	
+	<insert id="insertRent" parameterType="map">
+		INSERT INTO rent_history(
+			rent_num,
+			callNumber,
+			mem_id
+		) VALUES(
+			#{rent_num},
+			#{callNumber},
+			#{mem_id}
 		)
 	</insert>
 </mapper>

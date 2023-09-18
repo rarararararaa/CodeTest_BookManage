@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -102,6 +103,30 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public int allCount() {
 		return bookMapper.allCount();
+	}
+
+	@Override
+	public void inertBook(Map<String, Object> map) {
+		bookMapper.insertBook(map);
+	}
+
+	@Override
+	public BookVO selectBook(String callNumber) {
+		return bookMapper.selectBook(callNumber);
+	}
+
+	@Override
+	public void insertRent(Map<String, Object> map) {
+		int rent_num = bookMapper.getRenseq();
+		map.put("rent_num", rent_num);
+		bookMapper.insertRent(map);
+		map.put("num", 1);
+		bookMapper.updateBookTable(map);
+	}
+
+	@Override
+	public BookVO bookcheck(String callNumber) {
+		return bookMapper.bookcheck(callNumber);
 	}
 
 	
