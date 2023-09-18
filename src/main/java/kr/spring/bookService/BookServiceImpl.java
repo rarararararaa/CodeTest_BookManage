@@ -142,6 +142,11 @@ public class BookServiceImpl implements BookService {
 		bookMapper.updateBookTable(map);
 	}
 
+	@Override
+	public void updateBook(Map<String, Object> map) {
+		bookMapper.updateBook(map);
+	}
+
 
 	
 	

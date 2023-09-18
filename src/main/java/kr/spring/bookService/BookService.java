@@ -13,6 +13,8 @@ public interface BookService {
 	//도서 관리
 	public void inertBook(Map<String, Object> map);
 	public List<BookVO> selectAll();
+	//도서 수정
+	public void updateBook(Map<String, Object> map);
 	public int allCount();
 	public BookVO selectBook(String callNumber);
 	//도서 확인

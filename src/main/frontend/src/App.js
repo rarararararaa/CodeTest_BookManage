@@ -5,6 +5,7 @@ import BookList from "./components/BookList"
 import BookInsert from "./components/BookInsert"
 import RentBook from "./components/RentBook"
 import BookDetail from "./components/BookDetail"
+import BookUpdate from "./components/BookUpdate"
 
 import './App.css';
 import React, {useState} from 'react';
@@ -56,6 +57,7 @@ function App() {
 				<Route path="/bookInsert" element={<BookInsert />}/>
 				<Route path="/rentBook" element={<RentBook />}/>
 				<Route path="/bookDetail" element={<BookDetail />}/>
+				<Route path="/bookUpdate" element={<BookUpdate />}/>
 			</Routes>
         </div>
     );

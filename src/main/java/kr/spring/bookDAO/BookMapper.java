@@ -15,7 +15,8 @@ public interface BookMapper {
 	//도서 추가
 	public void insertBook(BookVO book);
 	public void insertBook(Map<String, Object> map);
-	
+	//도서 수정
+	public void updateBook(Map<String, Object> map);
 	@Select("SELECT * FROM book")
 	public List<BookVO> selectAll();
 	

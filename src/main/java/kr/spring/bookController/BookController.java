@@ -88,5 +88,12 @@ public class BookController {
 		bookService.returnBook(map);
 		return "반납 처리가 되었습니다.";
 	}
+	//도서 수정
+	@PostMapping("/updateBook")
+	public String updateBook(@RequestBody Map<String, Object> map) {
+		log.debug("도서 수정"+map);
+		bookService.updateBook(map);
+		return "수정되었습니다.";
+	}
 	
 }

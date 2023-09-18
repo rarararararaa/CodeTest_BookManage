@@ -37,4 +37,16 @@
 			#{mem_id}
 		)
 	</insert>
+	<update id="updateBook" parameterType="map">
+		UPDATE book SET
+		isbn = #{isbn},
+		class_no = #{class_no},
+		book_name = #{book_name},
+		authors = #{authors},
+		publisher = #{publisher},
+		bookimageurl = #{bookImageUrl},
+		publication_year = #{publication_year},
+		book_detail = #{book_detail}
+		WHERE callNumber = #{callNumber}
+	</update>
 </mapper>

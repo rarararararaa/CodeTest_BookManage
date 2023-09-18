@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useParams, useLocation} from "react-router-dom"
+import {useParams, useLocation, Routes, Route, Link} from "react-router-dom"
 import moment from 'moment';
 import "moment/locale/ko";
+
+import BookUpdate from "./BookUpdate"
 const BookDetail =()=>{
 	moment.locale();
 	const location = useLocation();
 	const data = location.state.callNumber;
 		
-	console.log(data);
-	
 	const [list, setList] = useState([]);
 	const [bookInfo, setBookInfo] = useState();
 	const [rent_num, setRent_num] = useState(0);
@@ -26,7 +26,7 @@ const BookDetail =()=>{
 	},[]);
 	
 	const onClick =(rent_num)=>{
-		console.log(rent_num);
+		//console.log(rent_num);
 		axios({
 			url:'/api/returnBook',
 			method:'post',
@@ -43,8 +43,13 @@ const BookDetail =()=>{
 	
 	return (
 		<tabel>
-			<p>도서 대출 내역</p>
 			<thead>
+				<tr>
+					<Link to='/bookUpdate' state={{book_info:bookInfo}}>
+					<button>도서 수정</button>
+					</Link>
+					<p>도서 대출 내역</p>
+				</tr>
 				<tr>
 					<th>회원아이디</th>
 					<th>대출 상태</th>
