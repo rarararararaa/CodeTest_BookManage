@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import kr.spring.bookService.BookService;
 import kr.spring.bookVO.BookVO;
+import kr.spring.bookVO.RentVO;
 import kr.spring.memberService.MemberService;
 import kr.spring.util.PagingUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -53,11 +54,15 @@ public class BookController {
 		return map;
 	}
 	//도서 상세
-	@GetMapping("/bookDetail")
-	public Map<String, Object> showDetail(@RequestBody String callNumber){
-		BookVO book = bookService.selectBook(callNumber);
+	@PostMapping("/bookDetail")
+	public Map<String, Object> showDetail(@RequestBody Map<String, String> input){
+		Map<String, Object> map = new HashMap<String, Object>();
+		BookVO book = bookService.selectBook(input.get("callNumber"));
+		List<RentVO> list = bookService.rentList(input.get("callNumber"));
+		map.put("bookInfo", book);
+		map.put("rentList", list);
 		log.debug("<<도서 상세 정보>> : "+book);
-		return null;
+		return map;
 	}
 	//도서 대출
 	@PostMapping("/rentBook")
@@ -76,6 +81,12 @@ public class BookController {
 			check.put("result", false);
 		}
 		return check;
+	}
+	//도서 반납 처리
+	@PostMapping("/returnBook")
+	public String returnBook(@RequestBody Map<String, Object> map){
+		bookService.returnBook(map);
+		return "반납 처리가 되었습니다.";
 	}
 	
 }

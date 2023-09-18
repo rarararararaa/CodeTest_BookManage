@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import kr.spring.bookDAO.BookMapper;
 import kr.spring.bookVO.BookVO;
+import kr.spring.bookVO.RentVO;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -128,6 +129,19 @@ public class BookServiceImpl implements BookService {
 	public BookVO bookcheck(String callNumber) {
 		return bookMapper.bookcheck(callNumber);
 	}
+
+	@Override
+	public List<RentVO> rentList(String callNumber) {
+		return bookMapper.rentList(callNumber);
+	}
+
+	@Override
+	public void returnBook(Map<String, Object> map) {
+		bookMapper.returnBook((Integer)map.get("rent_num"));
+		map.put("num", 0);
+		bookMapper.updateBookTable(map);
+	}
+
 
 	
 	

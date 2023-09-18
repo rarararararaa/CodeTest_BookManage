@@ -4,11 +4,14 @@ import Register from "./components/Register"
 import BookList from "./components/BookList"
 import BookInsert from "./components/BookInsert"
 import RentBook from "./components/RentBook"
+import BookDetail from "./components/BookDetail"
 
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import {Routes, Route, Link, useLocation} from "react-router-dom"
 function App() {
+	
+	//주소
 	const location = useLocation();
 	console.log(location);
 	let login_check = window.sessionStorage.getItem('login_check');
@@ -43,8 +46,7 @@ function App() {
 					<button onClick={booklist_main}>도서 목록</button>
 				</nav>
 				{location.pathname === '/' && auth === '9'?
-				 <BookList /> 
-			:null}
+				 <BookList /> :null}
 			</div>
 			
 			:null)}
@@ -53,6 +55,7 @@ function App() {
 				<Route path="/register" element={<Register />}/>
 				<Route path="/bookInsert" element={<BookInsert />}/>
 				<Route path="/rentBook" element={<RentBook />}/>
+				<Route path="/bookDetail" element={<BookDetail />}/>
 			</Routes>
         </div>
     );

@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Routes, Route, Link} from "react-router-dom"
 
+import BookDetail from "./BookDetail"
 const BookList =()=>{
+	
 	const [list, setList] = useState([]);
+	
 	useEffect(()=>{
 		axios.get('api/bookList').then((res)=>{
 			setList(res.data.book_list);
@@ -24,18 +28,24 @@ const BookList =()=>{
 			</thead>
 			<tbody>
 			{
-				list.map(function(a,i){
+				list.map((i)=>{
 					return(
 						<tr>
-							<td>{list[i].callNumber}</td>
-							<td>{list[i].isbn}</td>
-							<td><a href="#">{list[i].book_name}</a></td>
-							<td>{list[i].authors}</td>
-							<td>{list[i].publisher}</td>
+							<td>{i.callNumber}</td>
+							<td>{i.isbn}</td>
 							<td>
-								{list[i].book_status === 0? '대출가능':'대출중'}
+								<Link to='/bookDetail' state={{callNumber: i.callNumber}}>{i.book_name}</Link>
 							</td>
+							<td>{i.authors}</td>
+							<td>{i.publisher}</td>
+							<td>
+								{i.book_status === 0? '대출가능':'대출중'}
+							</td>
+							<Routes>
+								<Route path="/bookDetail" element={<BookDetail />}/>
+							</Routes>
 						</tr>
+						
 					)
 				})
 			}
