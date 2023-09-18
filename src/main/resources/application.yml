@@ -17,8 +17,8 @@ spring:
   
   servlet:    multipart:      max-file-size: 50MB #파일 한 개당 최대 사이즈
       max-request-size: 200MB #요청당 최대 파일 크기          
-mybatis: #mybatis 설정  type-aliases-package: kr.spring.**.vo
-  mapper-locations: kr/spring/**/dao/*.xml
+mybatis: #mybatis 설정  type-aliases-package: kr.spring.**VO
+  mapper-locations: kr/spring/**DAO/*.xml
   
 logging: #로그 지정  level:
     '[kr.spring]': debug

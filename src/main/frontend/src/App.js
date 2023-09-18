@@ -1,6 +1,7 @@
 // src/main/frontend/src/App.js
 import Login from "./components/Login"
 import Register from "./components/Register"
+import BookList from "./components/BookList"
 
 import './App.css';
 import React from 'react';
@@ -25,6 +26,7 @@ function App() {
 			{auth === '1' ? '일반회원': (auth === '9' ? 
 			<div className="book-Manage">
 				관리자
+				<BookList />
 			</div>
 			
 			:null)}
