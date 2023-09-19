@@ -66,3 +66,269 @@ form p{
 .id-check{
 	margin-left: 5px;
 }
+/*이미지 사이즈 변경*/
+/*색상*/
+.bold{
+	border: 4.5px solid !important;
+}
+.white{
+	background-color: white;
+}
+.black{
+	background-color: black;
+}
+.gray{
+	background-color: #f2f2f2;
+}
+.red{
+	background-color: red;
+}
+.yellow{
+	background-color: yellow;
+}
+.green{
+	background-color: #40fe00;
+}
+.pink{
+	background-color:  #f91aff;
+}
+.blue{
+	background-color: blue;
+}
+.skyblue{
+	background-color:  #3fffff;
+}
+.border-non-rignt{	
+	border-right: none !important;
+	padding-right: 2px;
+}
+.border-non-left{
+	border-left: none !important;
+	padding-left: 2.4px;
+}
+.border-non-bottom{
+	border-bottom: none !important;
+	padding-bottom: 2.4px;
+}
+/*도형*/
+.float{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.SetMakeImage{
+	margin: 10px auto;
+	width: 595.74px;
+	height: 595.74px;
+	border: 3px solid;
+}
+.Bigsquare{
+	width: 293.55px;
+	height: 293.55px;
+	border: 3px solid;
+}
+.square{
+	width: 142.3px;
+	height: 142.3px;
+	border: 3px solid;
+}
+.SetImageSize{
+	margin: 0 auto;
+	background-image: url('./FrontEnd-Test-Image.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 600px;
+	height: 600px;
+}
+/*위에 있는 도형들*/
+.center{
+	position: relative;
+    top: -450px;
+    left: 147px;
+}
+.center-left{
+	position: relative;
+    top: 74px;
+    border: 4.5px solid;
+    left: -3px;
+}
+.center-botton{
+	position: relative;
+    top: -4.5px;
+    left: 68px;
+    border: 4.5px solid;
+    z-index: 10;
+	
+}
+.two-center{
+	position: relative;
+	top: 73px;
+    left: 67px;
+	border: 4.5px solid;
+	z-index: 10;
+}
+.three-center{
+	position: relative;
+    top: 70px;
+    left: 70px;
+	z-index: 20;
+	border: 4.5px solid !important;
+}
+
+/*포트폴리오 화면*/
+.portfolio-main{
+	margin: 10px auto;
+	width: 1200px;
+	min-height: 900px;
+}
+.header{
+	height: 200px;
+	background-color: #34ebae;
+}
+.myInfo p{
+	position: relative;
+	left: 80px;
+	text-align:left;
+	font-size: 40px;
+	font-weight: bold;
+}
+.myInfo img{
+	margin-top: -50px;
+	margin-left: 150px;	
+	width: 240px;
+}
+.myInfo-content tr:nth-child(2) th{
+	padding-bottom: 30px;
+}
+.myInfo-content tr:not(:first-child) th{
+	padding-left: 100px;
+	text-align: left;
+	font-size: 30px;
+}
+.myInfo-content tr td{
+	padding-bottom: 10px;
+	padding-left: 100px;
+	text-align: left;
+	font-size: 20px;
+}
+.info{
+	list-style: disc;
+}
+hr{
+	margin: 40px 0;
+	height: 2px;
+	background-color: #f0f0f0;
+	border: none;
+}
+.etc, .technology, .project{
+	margin-left: 80px;
+	text-align: left;
+}
+.education{
+	margin-bottom: 30px;
+}
+.etc-title, .technology-title, .project-title{
+	font-weight: bold;
+	font-size: 30px;
+}
+.info{
+	font-size: 20px;
+}
+.info li{
+	margin: 5px 0;
+}
+.info-detail{
+	list-style: circle;
+}
+.tech-table{
+	margin: 30px 0 0 30px;
+	font-size: 20px;
+}
+.tech-table thead{
+	height: 40px;
+}
+.tech-table tr th:first-child, .tech-table tr td:first-child{
+	width: 250px;
+}
+.tech-table tr th:last-child, .tech-table tr td:last-child{
+	width: 500px;
+}
+.tech-table span{
+	margin-right: 7px;
+	padding: 0 10px;
+	border-radius: 5px;
+	color:#6a3a3c;
+}
+.tech-table tbody tr td{
+	height: 35px;
+}
+/*태그*/
+#HTML5{
+	background-color: #f5e0e9;
+}
+#CSS3{
+	background-color: #e8deee; 
+}
+#JavaScript{
+	background-color: #fadec9; 
+}
+#JQuery{
+	background-color: #f1f0ef; 
+}
+#React{
+	background-color: #d3e5ef; 
+}
+
+#Java{
+	background-color: #ffe2dd; 
+}
+#Spring{
+	background-color: #e3e2e0; 
+}
+
+#OracleDB{
+	background-color: #eee0da; 
+}
+
+#git, #AWS{
+	background-color: #dbeddb; 
+}
+/*프로젝트*/
+.project{
+	margin-top: 70px; 
+}
+.bookProject, .apartProject{
+	margin-top: 30px;
+	margin-left: 30px;
+	padding: 15px;
+	border: 1px solid #f0f0f0;
+}
+.bookProject span,.apartProject span{
+	font-size: 23px;
+}
+.bookProject img{
+	width: 600px;
+}
+#LMall{
+	margin: 50px 0 0 35px;
+	width: 900px;
+}
+#LMpay{
+	margin-top: 30px;
+	width: 800px;
+}
+#LMbook{
+	margin-top: 50px;
+	width: 850px;
+}
+.bookProject img:nth-child(2){
+	width: 1000px;
+}
+.apartProject img{
+	margin-top: 30px;
+	width: 1000px;
+}
+.swiper-slide{
+	text-align: center;
+}

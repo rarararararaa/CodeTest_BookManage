@@ -6,6 +6,8 @@ import BookInsert from "./components/BookInsert"
 import RentBook from "./components/RentBook"
 import BookDetail from "./components/BookDetail"
 import BookUpdate from "./components/BookUpdate"
+import Portfolio from "./components/Portfolio"
+import ImageSet from "./components/ImageSet"
 
 import './App.css';
 import React, {useState} from 'react';
@@ -28,9 +30,11 @@ function App() {
 	//console.log(auth);
     return (
         <div className="App">
+			<p>과제1: 도서관리시스템 | 과제2:포트폴리오/이미지</p>
 			{login_check === null ?
 			<nav>
-				<Link to="/login">로그인</Link> | <Link to="/register">회원가입</Link>
+				[<Link to="/login">로그인</Link> | <Link to="/register">회원가입</Link>]
+				[<Link to="/portfolio">포트폴리오</Link> | <Link to="/imageSet">이미지</Link>]
 			</nav>
 			: <button onClick={logout}>로그아웃</button>
 			}
@@ -58,6 +62,8 @@ function App() {
 				<Route path="/rentBook" element={<RentBook />}/>
 				<Route path="/bookDetail" element={<BookDetail />}/>
 				<Route path="/bookUpdate" element={<BookUpdate />}/>
+				<Route path="/portfolio" element={<Portfolio />}/>
+				<Route path="/imageSet" element={<ImageSet />}/>
 			</Routes>
         </div>
     );

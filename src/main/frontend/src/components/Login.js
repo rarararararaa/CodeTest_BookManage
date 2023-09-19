@@ -4,9 +4,6 @@ import {useForm} from 'react-hook-form';
 const Login =()=>{
 	const {register, handleSubmit, formState: {errors}} = useForm({mode:"onSubmit"})
 	//console.log(watch());
-	const onClick =(e)=>{
-		document.location.href="/register";
-	}
 	const onSumit =(data)=>{
 		let {id, passwd} = data;
 		axios({
@@ -42,7 +39,6 @@ const Login =()=>{
 			})}/>
 			<p>{errors.passwd && errors.passwd.message}</p>
 			<input type="submit" value="로그인"/>
-			<button onClick={onClick}>회원가입</button>
 		</form>
 		</div>
 	)

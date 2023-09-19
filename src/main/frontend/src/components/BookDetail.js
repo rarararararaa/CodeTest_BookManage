@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useParams, useLocation, Routes, Route, Link} from "react-router-dom"
+import {useLocation, Link} from "react-router-dom"
 import moment from 'moment';
 import "moment/locale/ko";
 
-import BookUpdate from "./BookUpdate"
 const BookDetail =()=>{
 	moment.locale();
 	const location = useLocation();
@@ -12,7 +11,6 @@ const BookDetail =()=>{
 		
 	const [list, setList] = useState([]);
 	const [bookInfo, setBookInfo] = useState();
-	const [rent_num, setRent_num] = useState(0);
 	useEffect(()=>{
 		axios({
 			url:'/api/bookDetail',
@@ -65,13 +63,13 @@ const BookDetail =()=>{
 							<td>{rent.mem_id}</td>
 							<td>
 							{
-								rent.book_status==1?'대출중':'반납'	
+								rent.book_status===1?'대출중':'반납'	
 							}
 							</td>
 							<td>{moment(rent.rent_reg_date).format('LL')}</td>
 							<td>{rent.return_reg_date === null?'-':moment(rent.return_reg_date).format('LL')}</td>
 							<td>
-								{rent.book_status==1?
+								{rent.book_status===1?
 								<button onClick={()=>onClick(rent.rent_num)}>반납처리</button>
 								:'O'}
 							</td>
