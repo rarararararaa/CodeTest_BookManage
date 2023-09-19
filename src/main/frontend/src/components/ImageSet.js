@@ -27,7 +27,6 @@ const ImageSet =()=>{
 				<div className="square gray center-botton"></div>
 			</div>
 		</div>
-		//<div className="SetImageSize"></div>
 	)
 }
 
