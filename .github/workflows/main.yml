@@ -8,7 +8,7 @@ on:
     # --------------------------추가
 env:
   PROJECT_NAME: code_test
-  BUCKET_NAME: moduform-codetest-cicl-bucket
+  BUCKET_NAME: moduform-codetest-cicd-bucket
   CODE_DEPLOY_APP_NAME: codetest_cicd
   DEPLOYMENT_GROUP_NAME: codetest_cicd_group
 
