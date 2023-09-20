@@ -100,7 +100,7 @@ form p{
 }
 .border-non-rignt{	
 	border-right: none !important;
-	padding-right: 2px;
+	padding-right: 2.3px;
 }
 .border-non-left{
 	border-left: none !important;
@@ -124,12 +124,12 @@ form p{
 	border: 3px solid;
 }
 .Bigsquare{
-	width: 293.55px;
+	width: 293px;
 	height: 293.55px;
 	border: 3px solid;
 }
 .square{
-	width: 142.3px;
+	width: 141.7px;
 	height: 142.3px;
 	border: 3px solid;
 }
