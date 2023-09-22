@@ -20,7 +20,7 @@ function App() {
 	let login_check = window.sessionStorage.getItem('login_check');
 	let auth = window.sessionStorage.getItem('auth');
 	const logout =()=>{
-		window.sessionStorage.clear();
+		window.sessionStorage.clear();  
 		window.location.href='/';
 	}
 	const booklist_main=()=>{
