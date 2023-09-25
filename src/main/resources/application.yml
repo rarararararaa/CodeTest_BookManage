@@ -27,4 +27,4 @@ server:  port: 8800
   servlet:
     encoding:      charset: UTF-8
       enabled: true #http 인코딩 지원을 활성화할지 여부
-      force: true
+      force: true    context-path: /wasApi
