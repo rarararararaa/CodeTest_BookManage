@@ -149,7 +149,7 @@ const Portfolio =()=>{
 						<img id="LMall" src={require("../img/LM_storeall.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("../img/LM_storebest.png")t}/>
+						<img src={require("../img/LM_storebest.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
 						<img src={require("../img/LM_storecart.png")} id="LMpay"/>
