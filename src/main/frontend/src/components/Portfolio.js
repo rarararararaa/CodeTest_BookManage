@@ -143,25 +143,25 @@ const Portfolio =()=>{
      					 onSlideChange={() => console.log('slide change')}
 					>
 					<SwiperSlide>
-						<img src={require("./img/LM_storemain.png").default}/>
+						<img src={require("../img/LM_storemain.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img id="LMall" src={require("./img/LM_storeall.png").default}/>
+						<img id="LMall" src={require("../img/LM_storeall.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/LM_storebest.png").default}/>
+						<img src={require("../img/LM_storebest.png")t}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/LM_storecart.png").default} id="LMpay"/>
+						<img src={require("../img/LM_storecart.png")} id="LMpay"/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/LM_storeorder.png").default}  id="LMpay"/>
+						<img src={require("../img/LM_storeorder.png")}  id="LMpay"/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/LM_bookmain.png").default}  id="LMbook"/>
+						<img src={require("../img/LM_bookmain.png")}  id="LMbook"/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/LM_bookdetail.png").default}/>
+						<img src={require("../img/LM_bookdetail.png")}/>
 					</SwiperSlide>
 					</Swiper>
 				</div>{/*end bookProject */}
@@ -178,22 +178,22 @@ const Portfolio =()=>{
      					 onSlideChange={() => console.log('slide change')}
 					>
 					<SwiperSlide>
-						<img src={require("./img/apartmain.png").default}/>
+						<img src={require("../img/apartmain.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/apartnotice.png").default}/>
+						<img src={require("../img/apartnotice.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/apartbook.png").default}/>
+						<img src={require("../img/apartbook.png")}/>
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/apartcommu.png").default} />
+						<img src={require("../img/apartcommu.png")} />
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/apartanswer.png").default}  />
+						<img src={require("../img/apartanswer.png")}  />
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src={require("./img/apartadmin.png").default}/>
+						<img src={require("../img/apartadmin.png")}/>
 					</SwiperSlide>
 					</Swiper>
 				</div>{/*end apartProject */}
