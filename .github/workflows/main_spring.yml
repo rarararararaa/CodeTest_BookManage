@@ -3,10 +3,10 @@ name: Deploy String boot
 on:
   push:
     branches:
-      - main  #main branch에 push 시 동작
+      - master  #main branch에 push 시 동작
 
 env:
-  S3_BUCKET_NAME : s3버킷명
+  S3_BUCKET_NAME : moduform-codetest-cicl-bucket
   CODE_DEPLOY_APPLICATION_NAME: aws_test_cd
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: aws_test_cd_group
 
