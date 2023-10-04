@@ -28,7 +28,7 @@ jobs:
         shell: bash
 
       - name: Build and Test fuck
-        run: ./gradlew clean build --exclude-task test
+        run: CI='false' ./gradlew clean build --exclude-task test
         
 # --------------------------추가      
       - name: Make Zip File
