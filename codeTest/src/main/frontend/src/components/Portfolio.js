@@ -13,7 +13,7 @@ const Portfolio =()=>{
 		<div className="portfolio-main">
 			<div className="header"></div>
 			<div className="myInfo">
-				<p>최지혜의 포트폴리오입니다~~</p>
+				<p>최지혜의 포트폴리오입니다~~!!!!</p>
 				<table className="myInfo-content">
 					<tr>
 						<th rowSpan="7">
