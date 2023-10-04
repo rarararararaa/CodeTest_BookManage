@@ -6,7 +6,7 @@ on:
       - master  #main branch에 push 시 동작
 
 env:
-  S3_BUCKET_NAME : moduform-codetest-cicl-bucket
+  S3_BUCKET_NAME : aws-test-s3-bucket-beta
   CODE_DEPLOY_APPLICATION_NAME: aws_test_cd
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: aws_test_cd_group
 
