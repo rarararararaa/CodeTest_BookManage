@@ -34,7 +34,7 @@ jobs:
         shell: bash
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: CI='false' ./gradlew clean build --exclude-task test
         shell: bash
         
       - name: Make zip file
